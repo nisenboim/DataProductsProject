@@ -1,0 +1,24 @@
+---
+title: "Expected MGP"
+author: "Alex Nisenboim"
+date: "Saturday, June 20, 2015"
+output: html_document
+---
+#Summary
+This is a description of "Expected MPG" app. It predict the expected MPG (miles per galon) given car's weight and transmission type. At the core of the calculation is a simple linear regression model: 
+
+```{r}
+fit <<- lm(formula = mpg ~ am + wt, data = mtcars)
+```
+
+Than, given the two parameters, it uses the "predict" function to calculate the prediction. 
+
+#Usage
+There are two widgets:
+
+1. A drop down list that lets the user to choose the transmission type
+2. A slider that lets the user to choose the car weight
+
+Reactive functions reflect user's choice on the right (main) panel and immediately output the predicted MPG value.
+
+#ENJOY!

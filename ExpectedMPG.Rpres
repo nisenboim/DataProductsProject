@@ -1,0 +1,41 @@
+Expected MPG App
+========================================================
+author: Alex Nisenboim
+date: `r format(Sys.Date(), format = "%B %d %Y")`
+transition: rotate
+
+Why "Expected MPG App"?
+======================================================== 
+
+Don't trust car dealers? Here is some help, free of charge!
+
+- Figure out the MPG of your car all by yourself
+- Based on independent data survey
+- Extremly easy to use
+
+How It Works?
+========================================================
+
+It's very simple - just three simple steps:
+
+- Point your browser here: https://nisenboim.shinyapps.io/proj
+- Choose the type of transmission
+- Choose car's weight
+
+You are done, the result is on the right side of the screen!!
+
+
+Under The Hood
+========================================================
+
+- The data comes from the 1974 Motor Trend US magazine  
+- It's independet from your dealer and, therefore, not biased
+- The prediction is based on linear model that regressed MPG on Transmission Type and Weight  
+```{r}
+fit <- lm(formula = mpg~am+wt, data = mtcars)
+```
+
+THANK YOU!
+========================================================
+                          
+
